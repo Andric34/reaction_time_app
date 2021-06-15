@@ -144,7 +144,7 @@ export default new Vuex.Store({
       })
       // returning the current round
       const roundNumber = lobbie[0].game.currentRoundNumber - 1
-      return lobbie[0].game.rounds[roundNumber]
+      return lobbie[0].game.rounds[roundNumber].uuid
     },
     getRankingList (state) {
       // gets an array that has only the selected lobby

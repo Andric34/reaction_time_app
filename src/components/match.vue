@@ -73,7 +73,7 @@ export default {
       this.$store.state.socket.emit('leaveLobby', lobbie[0].channel)
       // geting game and round UUID from the store
       const gameUUID = this.$store.getters.getCurrentLobbie[0].game.uuid
-      const roundUUID = this.$store.getters.getCurrentRound.uuid
+      const roundUUID = this.$store.getters.getCurrentRound
       // constructing data object that is emited to the server
       const data = [roundUUID, gameUUID, this.reactionTime]
       // emiting updateRoundResult and passing data object
