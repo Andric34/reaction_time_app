@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app app>
+    <AppBar ></AppBar>
+    <NavDrawer ></NavDrawer>
+    <v-main
+    app
+    class="main-content"
+    >
+      <router-view></router-view>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import AppBar from '../components/app-bar'
+import NavDrawer from '../components/nav-drawer'
 
 export default {
-  name: 'Home',
+  data () {
+    return {
+    }
+  },
   components: {
-    HelloWorld
+    AppBar,
+    NavDrawer
   }
 }
 </script>
+<style lang="scss" scoped>
+.main-content{
+  background-color:rgb(27, 30, 36);
+}
+
+</style>
